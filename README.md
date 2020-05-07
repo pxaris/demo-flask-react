@@ -33,7 +33,7 @@ $ npm install css-loader style-loader sass-loader node-sass --save-dev
 ### (5) install Webpack
 $ npm install webpack webpack-cli --save-dev
 
-# (6) install and configure Babel (tools that allow integration with Webpack)
+### (6) install and configure Babel (tools that allow integration with Webpack)
 $ npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev
 
 ### (7) create a ".babelrc" file [ touch .babelrc ] with the following contents:
