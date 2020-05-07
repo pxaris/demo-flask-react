@@ -103,7 +103,7 @@ $ npm start
 $ npm start
 
 ### Additional capabilities
-(1) display our original JavaScript while debugging by adding the following to "webpack.config.js" file:    devtool: 'cheap-module-eval-source-map'  
+(1) display our original JavaScript while debugging by adding the following to "webpack.config.js" file:    `devtool: 'cheap-module-eval-source-map'`  
 (2) install DevServer to server the react app:  
     - $ npm install webpack-dev-server --save-dev  
     - add to "webpack.config.js":      `devServer: {    contentBase: path.join(__dirname, 'public')  }`  
