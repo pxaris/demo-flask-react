@@ -43,8 +43,6 @@ $ npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --s
 }
 ```
 
-
-##### Now its time to teach webpack how to compile JSX into JavaScript code. To do that we need to use loader. A loader lets us customize the behavior of webpack when it loads a certain file. It's going to run certain files through babel. For that, we need to set up a loader in webpack.config.js file via the module property on our objects. module property needs an array of rules and a rule let us define how we want to use our loaders.
 ### (8) create Webpack config file [ touch webpack.config.js ] with the below content:
 ```
 const path = require('path');
@@ -70,7 +68,6 @@ module.exports = {
   }
 };
 ```
- Here we set the rules of the object where loader property tells which loader we want to use afor which files. Specifically, "test" property for what files do we actually want to run this loader on and we want to run it on files that end up with ".js" or ".jsx", and we "exclude" files under "node_modules/", regarding the "babel-loader".
 
 ### (9) add the Webpack command to package.json under "scripts" (production mode for optimized files):
 ```
@@ -101,11 +98,3 @@ $ npm start
 
 ### (14) every time changes are made to react app, re-generate public files with:
 $ npm start
-
-### Additional capabilities
-(1) display our original JavaScript while debugging by adding the following to "webpack.config.js" file:    `devtool: 'cheap-module-eval-source-map'`  
-(2) install DevServer to server the react app:  
-    - $ npm install webpack-dev-server --save-dev  
-    - add to "webpack.config.js":      `devServer: {    contentBase: path.join(__dirname, 'public')  }`  
-    - add under "scripts" to package.json:      `"dev-server": "webpack-dev-server"`  
-    - run with:     $ npm run dev-server
